@@ -27,9 +27,12 @@ int main(){
 	Array a=create_array(init_size);
 	
 	int k=-1,op;
-	while(++k<RUN_TIMES){
+	while(1){
 		display_menu();
 		scanf("%d",&op);
+		//getchar();
+		if(op==-1)
+			break;
 		system("cls");
 		
 		switch(op){
@@ -135,6 +138,7 @@ void inflate_array(Array *a,int incr_size){
 	for(i=0;i<a->size;i++){
 		p[i]=a->array[i];
 	}
+	memset(p+i,0,sizeof(int)*incr_size);
 	free(a->array);
 	a->array=p;
 	a->size+=incr_size;
