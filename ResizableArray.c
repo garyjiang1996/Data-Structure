@@ -26,11 +26,10 @@ int main(){
 	getchar();
 	Array a=create_array(init_size);
 	
-	int k=-1,op;
+	int op;
 	while(1){
 		display_menu();
-		scanf("%d",&op);
-		//getchar();
+		scanf("%d",&op);	
 		if(op==-1)
 			break;
 		system("cls");
